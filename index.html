@@ -1987,9 +1987,17 @@
         // Download Resume Function
         function downloadResume(event) {
             event.preventDefault();
-            alert('Resume download will be implemented. For now, please contact me via email for my latest resume.');
-            // In production, this would trigger a PDF download
-            // window.open('/resume/MithranBala_Resume.pdf', '_blank');
+            
+            // Method 1: Open in new tab (easier for users to view first)
+            window.open('/assets/MithranBala_Resume.pdf', '_blank');
+            
+            // Method 2: Force download (uncomment if you prefer this)
+            // const link = document.createElement('a');
+            // link.href = '/assets/MithranBala_Resume.pdf';
+            // link.download = 'MithranBala_Resume.pdf';
+            // document.body.appendChild(link);
+            // link.click();
+            // document.body.removeChild(link);
         }
 
         // Fetch GitHub Stats (based on public repos)
